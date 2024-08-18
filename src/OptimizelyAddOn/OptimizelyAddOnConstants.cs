@@ -2,5 +2,5 @@
 
 public static class OptimizelyAddOnConstants
 {
-    public const string AuthorizationPolicy = "Stott:SecurityOptimizely:Policy";
+    public const string AuthorizationPolicy = "OptimizelyAddOn:Security:Policy";
 }

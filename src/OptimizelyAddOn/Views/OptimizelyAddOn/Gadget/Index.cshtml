@@ -1,0 +1,30 @@
+@using EPiServer.Shell.Navigation
+@model OptimizelyAddOn.Gadget.GadgetViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@Model.Title</title>
+    <style nonce="@Model.Nonce">
+        .value-prefix {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>@Model.Title</h1>
+        <p><span class="value-prefix">Content Id: </span> @Model.ContentId</p>
+        @if(Model.Page is null)
+        {
+            <p><span class="value-prefix">Page: </span> No page found</p>
+        } else {
+            <p><span class="value-prefix">Page: </span> @Model.Page.Name</p>
+        }
+    </div>
+</body>
+</html>

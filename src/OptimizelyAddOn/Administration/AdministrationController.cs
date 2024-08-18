@@ -50,7 +50,7 @@ public sealed class AdministrationController : Controller
     [AllowAnonymous]
     public IActionResult PublicList()
     {
-        var model = new List<string> { "foo", "boo" };
+        var model = new List<string> { "public", "foo", "boo" };
 
         return Json(model);
     }
@@ -59,7 +59,7 @@ public sealed class AdministrationController : Controller
     [Route("~/optimizely-addon/administration/private/list")]
     public IActionResult PrivateList()
     {
-        var model = new List<string> { "foo", "boo" };
+        var model = new List<string> { "private", "foo", "boo" };
 
         return Json(model);
     }

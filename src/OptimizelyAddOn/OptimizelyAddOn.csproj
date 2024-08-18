@@ -1,11 +1,45 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Title>Optimizely AddOn Example</Title>
+    <Version>0.1.0.0</Version>
+    <PackageReleaseNotes>An example AddOn for Optimizely CMS 12</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Optimizely</PackageTags>
+    <RepositoryUrl>https://github.com/GeekInTheNorth/OptimizelyAddOnTemplate</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/GeekInTheNorth/OptimizelyAddOnTemplate</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Your Name 2024</Copyright>
+    <Description>An example AddOn for Optimizely CMS 12</Description>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="module.config">
+      <Pack>true</Pack>
+      <PackagePath>contentFiles\module.config</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="msbuild\copyfiles.targets">
+      <Pack>true</Pack>
+      <PackagePath>build\$(MSBuildProjectName).targets</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
